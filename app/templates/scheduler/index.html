@@ -15,7 +15,7 @@
         <br><br><br>
         <div class="row">
             <div class="col-md-12">
-                <form action="/" method="post">
+                <form action="/app/" method="post">
                     <div class="col-md-2">
                     </div>
                     <center>
@@ -33,7 +33,9 @@
                                 <option value="CPSC221">CPSC340</option>                                
                             </select><br>
                         {% endfor %}               
-                        <input type="submit" value="OK">
+                            {% csrf_token %}
+                            {{ form }}
+                            <input type="submit" value="Submit" />
                     </div>
                     <div class="col-md-2">
                     </div>

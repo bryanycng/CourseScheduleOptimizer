@@ -1,5 +1,6 @@
 from django.shortcuts import render, HttpResponse
 from django.template import loader
+from django import forms
 import requests
 
 # Create your views here.
