@@ -19,23 +19,10 @@
                     <div class="col-md-2">
                     </div>
                     <center>
-                    <div class="col-md-4">
-                        {% for i in "xxxxxxxx" %}
-                            <label>Course {{forloop.counter}} </label>
-                            <select id= course{{forloop.counter}}>
-                                <option value="CPSC110">CPSC110</option>
-                                <option value="CPSC121">CPSC121</option>
-                                <option value="CPSC210">CPSC210</option>
-                                <option value="CPSC221">CPSC221</option>
-                                <option value="CPSC210">CPSC310</option>
-                                <option value="CPSC221">CPSC313</option>
-                                <option value="CPSC221">CPSC320</option>
-                                <option value="CPSC221">CPSC340</option>                                
-                            </select><br>
-                        {% endfor %}               
-                            {% csrf_token %}
-                            {{ form }}
-                            <input type="submit" value="Submit" />
+                    <div class="col-md-4">          
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <input type="submit" value="Submit" />
                     </div>
                     <div class="col-md-2">
                     </div>
@@ -55,7 +42,5 @@
                 </form>
             </div>
         </div>
-
-
     </body>
 </html>
